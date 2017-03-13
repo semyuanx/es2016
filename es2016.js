@@ -267,21 +267,101 @@
 //let {toString:s} = 123;
 //s === Number.prototype.toString;
 
-5.函数参数的解构赋值
+//5.函数参数的解构赋值
+//function add([x,y]){
+//	return x+y;
+//}
+//console.log(add([1,2]));
 
+//[[1,2],[3,4]].map(([a,b])=>a+b);
 
+//function move({x = 0,y=0}={}){
+//	console.log([x,y]);
+//}
+//move({x:3})
 
+//function move({x,y} = {x:0,y:0}){
+//	console.log([x,y]);
+//}
+//move({x:2,y:3})
+//move({})
+//move()
 
+//[1,undefined,3].map((x='yes')=>console.log(x));
+//
+//let [(a)] = [1];
+//let {x: (c)} = {};
+//let ({x: c}) = {};
+//let {(x: c)} = {};
+//let {(x): c} = {};
 
+//let x = 1;
+//let y = 2;
+//[x,y] = [y,x];
+//console.log(x,y)
 
+//function example(){
+//	return [1,2,3];
+//}
+//let [a,b,c] = example();
+//console.log(a,b,c)
 
+//function f([x,y,z]){
+//	console.log(x,y,z);
+//}
+//f([1,2,3])
 
+//function f({x=0,y=0,z=1}){
+//	console.log('x:'+x,'y:'+y,'z:'+z);
+//}
+//f({x:10,z:20})
 
+//let jsonData = {
+//	id:22,
+//	status:'ok',
+//	data:[888,999]
+//}
+//let {id,status,data:number} = jsonData;
+//console.log(id,status,number);
 
+//var map = new Map();
+//map.set('first','hello');
+//map.set('second','world');
+//for(let [key,value] of map){
+//	console.log(key,value)
+//}
 
+//var [foo] = ['Hello'];
+//console.log(foo)
 
+//let formInit = {
+//	one: {
+//		value: 'one'
+//	},
+//	two: {
+//		value: 'two'
+//	}
+//};
+//let [x,y] =[formInit.one,formInit.two]
+//console.log(x,y)
 
+//for(let item of "hahahahahahahah"){
+//	console.log(item)
+//}
 
+//console.log("d哈df".charAt(1));
+
+//var s = "hello world";
+//console.log(s.startsWith('he'));
+//console.log(s.endsWith('ld'));
+//console.log(s.includes(' '));
+
+//var s = "hello world";
+//console.log(s.startsWith('e',1));
+//console.log(s.endsWith('he',2)); //前几个字符
+//console.log(s.includes('llo', 2)) // false
+
+字符串扩展 repeat()
 
 
 
