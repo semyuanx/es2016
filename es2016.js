@@ -361,7 +361,242 @@
 //console.log(s.endsWith('he',2)); //前几个字符
 //console.log(s.includes('llo', 2)) // false
 
-字符串扩展 repeat()
+//var s = 'x'.repeat(2);
+//var s = 'hello'.repeat(2.1)
+//var s = 'hello'.repeat(2.9)
+//console.log(s);
+
+//console.log(`there is 
+//	work`);
+//	
+//var name = "bob",time = "today";
+//console.log(`hello ${name},how are you ${time}`);
+
+//var tim = `\`yo\`,wa!!`;
+//console.log(tim)
+
+//var time = `
+//	<ul>
+//		<li></li>
+//	</ul>
+//`;
+//console.log(time)
+//console.log(time.trim())
+
+//var x = 1;
+//var y = 2;
+//var s = `${x}+${y}=${x+y}`;
+//console.log(s);
+//var st = `${x}+${y*2} = ${x+y*2}`;
+//console.log(st)
+
+//var obj = {x:1,y:2};
+//var con =  `${obj.x+obj.y}`;
+//console.log(con)
+
+//function fn(){
+//	return 'hahah';
+//}
+//var s = `foo ${fn()} bar`;
+//console.log(s)
+
+//var msg = `Hello ${'haha'}`;
+//console.log(msg)
+
+//const tmpl = addrs =>`
+//	<table>
+//		${addrs.map(addr=>`
+//			<tr><td>${addr.first}</td></tr>
+//			<tr><td>${addr.last}</td></tr>
+//	`).join('')}
+//	</table>
+//`;
+//const data = [
+//	{first:'<Jane>',last:'Bond'},
+//	{first:'Lars',last:'<Croft>'}
+//]
+//console.log(tmpl(data));
+
+//let str = 'return' + '`Hello ${name}!`';
+//let func = new Function('name',str);
+//func('jack')
+//console.log(func('jack'))
+
+//var tmpl = `
+//	<ul>
+//		<% for(var i =0;i<data.supplies.length;i++){ %>
+//		<li><%= data.supplies[i] %></li>
+//		<% } %>
+//	</ul>
+//`;
+//function compile(template){
+//var evalExpr = /<%=(.+?)%>/g;
+//var expr = /<%([\s\S]+?)%>/g;
+//
+//template = template
+//  .replace(evalExpr, '`); \n  echo( $1 ); \n  echo(`')
+//  .replace(expr, '`); \n $1 \n  echo(`');
+//
+//template = 'echo(`' + template + '`);';
+//console.log(template);
+//var script =
+//`(function parse(data){
+//  var output = "";
+//
+//  function echo(html){
+//    output += html;
+//  }
+//
+//  ${ template }
+//
+//  return output;
+//})`;
+//
+//return script;
+//}
+//var parse = eval(compile(tmpl));
+//var  s = parse({supplies:['broom','mop','cleaner']});
+//console.log(s);
+
+//console.log`123456`
+
+//var a =5;
+//var b = 10;
+//function tag(s,v1,v2){
+//	console.log(s[0]);
+//	console.log(s[1]);
+//	console.log(s[2]);
+//	console.log(v1);
+//	console.log(v2);
+//	
+//	return "ok";
+//}
+//tag`Hello ${a+b} world ${a*b}`;
+
+//let sender = '<script>alert("abc")</script> <><><>';
+//function saferHtml(tml){
+//	var s = tml[0];
+//	for(var i = 0;i<arguments.length;i++){
+//		var arg = String(arguments[i]);
+//		s+=arg.replace(/$/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+//		console.log(arg)
+//	}
+//}
+//saferHtml(sender);
+//var msg = saferHtml`<p>我是谁</p>`;
+
+//function tag(strings){
+//	console.log(strings.raw[0]);
+//}
+//tag`First Line\nSecond line`;
+
+//console.log(String.raw`Hi\n${2+3}!`);
+
+//console.log(String.raw({raw:'test'},0,1,2));
+
+//console.log`123`;
+//console.log(`123`);
+
+//var regex = new RegExp('xyz','i')
+//console.log(regex);
+
+//console.log(3===3.0);
+
+//console.log(Number.EPSILON)
+//console.log(Number.EPSILON.toFixed(20))
+
+//console.log(0.1+0.2)
+//console.log(0.1+0.2-0.3)
+ 
+//console.log(Math.trunc(4.11));
+//console.log(Math.trunc(4.9));
+
+//console.log(Math.trunc('123.456'))
+
+//console.log( Math.sign(-5));
+//console.log( Math.sign(5));
+//console.log( Math.sign(0));
+//console.log( Math.sign(-0));
+
+//let a **= 2;
+//console.log(a)
+
+//let arrayLike = {
+//	'0':'a',
+//	'1':'b',
+//	'2':'c',
+//	length:3
+//}
+//console.log(arrayLike);
+//var arr1 = [].slice.call(arrayLike);
+//console.log(arr1);
+//var arr2 = Array.from(arrayLike);
+//console.log(arr2)
+
+//var ss = Array.from('hello');
+//console.log(ss)
+
+//console.log(Array.from({length:3}))
+
+//console.log(Array.from([1,2,3],(x)=>x*x))
+
+//console.log(Array.of(1,2,3))
+
+//var a={
+//	b:2,
+//	c:3
+//}
+//var b = {
+//	b:3,
+//	c:4
+//}
+//console.log(Array.of(a,b));
+
+//console.log([1,2,3,4,5,6].copyWithin(0,3,this.length));
+
+//console.log( [1,4,-5,-10].find((n)=>n<0));
+
+//[1,5,10,15].findIndex(function(val,index,arr){
+//	console.log(val>9)
+//})
+ 
+//console.log([1,2,3,4,5,5].fill(12346));
+
+//for(let index of ['a','b'].keys()){
+//	console.log(index);
+//}
+//for (let [i,elem] of ['a', 'b'].entries()) {
+//console.log(i,elem);
+//}
+
+//[,'a'].forEach((x,i)=> console.log(i));
+//['a',,'b'].filter(x=>true);
+//console.log( [,'a'].map(x=>1));
+//console.log( [,'a'].join('#'));
+
+//console.log([...['a',,'b']])
+//let s= [...'jajajajaja'];
+//console.log(s)
+//
+//console.log(...[])
+
+//function log(x,y){
+//	y = y || "world";
+//	console.log(x,y)
+//}
+//log(1,'')
+
+function Point(x = 0,y=0){
+	this.x = x;
+	this.y = y;
+}
+var p = new Point();
+
+
+
+
+
+
 
 
 
